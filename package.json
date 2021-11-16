@@ -1,0 +1,27 @@
+{
+    "name": "project-manager",
+    "version": "1.0.0",
+    "description": "Project Manager helps you keep track of your projects",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon index.js",
+        "start": "node index.js"
+    },
+    "keywords": [
+        "Express",
+        "Mongo",
+        "Project Manager"
+    ],
+    "author": "ExpressGradient",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^6.0.1",
+        "mongodb": "^4.1.4",
+        "slugify": "^1.6.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
+}
