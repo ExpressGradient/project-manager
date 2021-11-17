@@ -56,7 +56,7 @@ app.post("/new", async (req, res) => {
         await projects.insertOne({
             ...req.body,
             slug,
-            modified_at: new Date().toUTCString(),
+            modified_at: new Date().toLocaleString(),
         });
         res.redirect("/");
     }
@@ -70,7 +70,7 @@ app.post("/update/:slug", async (req, res) => {
             $set: {
                 ...req.body,
                 slug: slugify(req.body.title, { lower: true }),
-                modified_at: new Date().toUTCString(),
+                modified_at: new Date().toLocaleString(),
             },
         }
     );
