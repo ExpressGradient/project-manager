@@ -10,9 +10,9 @@
 
     <label class="font-semibold" for="stage">Project Stage</label>
     <select id="stage" name="stage" required class="p-3 border-2 border-black rounded">
-        <option value="development" selected="{{doc.isDev}}">Development</option>
-        <option value="staging" selected="{{doc.isStg}}">Staging</option>
-        <option value="production" selected="{{doc.isProd}}">Production</option>
+        <option value="development" {{#if isDev}} selected {{/if}}>Development</option>
+        <option value="staging" {{#if isStg}} selected {{/if}}>Staging</option>
+        <option value="production" {{#if isProd}} selected {{/if}}>Production</option>
     </select>
 
     <button type="submit" class="p-3 text-white text-lg font-semibold rounded bg-purple-600">Update</button>
